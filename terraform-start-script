@@ -1,1 +1,0 @@
-terraform apply -var do_token=79f2c6ed74e1842870e747a349db7cf6c5b7960286d9f657669e2b49ac777113 -var pvt_key=/home/centos/.ssh/do-terraform-keypair
