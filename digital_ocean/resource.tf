@@ -20,9 +20,15 @@ connection {
 provisioner "remote-exec" {
   inline = [
     "export PATH=$PATH:/usr/bin",
-    #install nginx
+    #install programs
     "sudo yum -y update",
-    "sudo yum -y install vim wget git python3"
+    "sudo yum install -y epel-release",
+    "sudo yum -y install vim wget git python3 snapd",
+    "sudo yum -y install snapd",
+    "sudo systemctl enable --now snapd.socket",
+    "sudo ln -s /var/lib/snapd/snap /snap",
+    "sudo snap install heroku --classic",
+    "sudo rebbot"
     ]
   }
 }
